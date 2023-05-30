@@ -65,12 +65,24 @@ h1 {
 }
 
 h2 {
-    padding-bottom: 48px;
+    padding-bottom: 16px;
     display: block;
     text-align: center;
     font-weight: normal;
     color: #FFF;
     font-size: 2em;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 48px;
+}
+
+.time p {
+    color: #FFF;
+    padding: 0;
 }
 
 .container {
