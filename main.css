@@ -8,6 +8,20 @@
     src: url(fonts/PixelOperator.ttf);
 }
 
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.15);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
 @keyframes vibrate {
 	0% {
 		transform: translate(0);
@@ -34,6 +48,48 @@
 	}
 }
 
+@keyframes bounce {
+	0% {
+		transform: translate(-25px, 25px);
+	}
+
+	25% {
+		transform: translate(-25px, -25px);
+        rotate: -30deg;
+	}
+
+	50% {
+		transform: translate(25px, 25px);
+	}
+
+	75% {
+		transform: translate(25px, -25px);
+        rotate: 30deg;
+	}
+
+	100% {
+		transform: translate(-25px, 25px);
+	}
+}
+
+@keyframes juicy-bounce {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 :root {
     --dark: #1D0A1B;
 }
@@ -47,7 +103,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    background-image: url(images/pexels-dmytro-kormylets-11650646.png);
+    background-image: url(images/pexels-denys-mikhalevych-12534263.png);
     background-repeat: repeat-y;
     background-position: center;
     background-size: cover;
@@ -65,12 +121,22 @@ h1 {
 }
 
 h2 {
-    padding-bottom: 16px;
+    padding-bottom: 32px;
     display: block;
     text-align: center;
     font-weight: normal;
     color: #FFF;
     font-size: 2em;
+    text-shadow: 2px 2px 0px rgba(29,10,27,1);
+}
+
+#clockImage {
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+#clockImage.clicked {
+    animation: juicy-bounce 0.5s;
 }
 
 .time {
@@ -83,6 +149,7 @@ h2 {
 .time p {
     color: #FFF;
     padding: 0;
+    text-shadow: 2px 2px 0px rgba(29,10,27,1);
 }
 
 .container {
@@ -169,7 +236,18 @@ div > ul {
 .animal {
     height: 80%;
     image-rendering: pixelated;
+}
+
+#apyr {
     animation: vibrate 2s ease 0s infinite normal forwards;
+}
+
+#xaba {
+    animation: pulse 4s ease 0s infinite normal forwards;
+}
+
+#pinhvin {
+    animation: bounce 4s linear 0s infinite normal forwards;
 }
 
 #cover {
