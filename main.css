@@ -129,12 +129,12 @@ h2 {
     text-shadow: 2px 2px 0px rgba(29,10,27,1);
 }
 
-#clockImage {
+#clock-image {
     margin-right: 1em;
     cursor: pointer;
 }
 
-#clockImage.clicked {
+#clock-image.clicked {
     animation: juicy-bounce 0.5s;
 }
 

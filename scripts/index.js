@@ -2,6 +2,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
 // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder
 
 // Tijd op de site begint bij 12 uur 's middags, tijd op de site verschuift elke 5 seconden
 let timeOfDay = 12
@@ -149,14 +150,14 @@ function manualClick() {
 }
 
 function blackout() {
-    blackoutCount++
-
     cover.style.backgroundColor = "#1D0A1B"
     cover.style.pointerEvents = "all"
 
     clearTimeout(blackoutTimeout)
 
     blackoutTimeout = setTimeout(function() {
+        // Variabele blackoutCount wordt met modulo gebruikt om bij te houden wat moet gebeuren na de blackout
+        blackoutCount++
         cover.style.backgroundColor = "transparent"
         cover.style.pointerEvents = "none"
         
