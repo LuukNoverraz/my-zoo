@@ -101,7 +101,6 @@
 
 body {
     width: 100vw;
-    height: 100vh;
     overflow-x: hidden;
     background-image: url(images/pexels-denys-mikhalevych-12534263.png);
     background-repeat: repeat-y;
@@ -155,7 +154,7 @@ h2 {
 .container {
     display: flex;
     min-height: 1000px;
-    padding: 0px 150px;
+    padding: 0px 150px 100px 150px;
 }
   
 .main-container {  
@@ -163,6 +162,9 @@ h2 {
     border: 3px solid #fff;
     outline: 3px solid var(--dark);
     height: 500px;
+}
+
+.main-container:first-of-type {
     margin-bottom: 50px;
 }
 
@@ -236,6 +238,7 @@ div > ul {
 .animal {
     height: 80%;
     image-rendering: pixelated;
+    cursor: pointer;
 }
 
 #apyr {
@@ -250,8 +253,14 @@ div > ul {
     animation: bounce 4s linear 0s infinite normal forwards;
 }
 
+#zoo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #cover {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     width: 100vw;
     height: 100vh;
@@ -259,13 +268,14 @@ div > ul {
     pointer-events: none;
 }
 
-#zoo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#blackout-text {
+    display: none;
 }
 
-canvas {
-    display: block;
-    border: 2px solid #000;
+#blackout-text h3 {
+    color: var(--dark);
+    font-family: PixelOperator;
+    padding: 1em;
+    text-align: center;
+    font-size: 2em;
 }
